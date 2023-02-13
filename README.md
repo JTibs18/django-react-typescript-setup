@@ -1,4 +1,4 @@
-# django-react-typescript-setup
+# django react typescript full stack boilerplate 
 Template for creating a web project with django, python, react and typescript stack
 
 <b> To run django: 
