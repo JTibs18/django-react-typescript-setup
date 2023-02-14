@@ -2,8 +2,8 @@ const path = require('path');
 const PUBLIC_PATH = "/static/frontend/";
 const PORT = 8000;
 module.exports = {
-  entry: './src/index.tsx',
-  module: {
+    entry: './src/index.tsx',
+    module: {
     rules: [
       {
         test: /\.tsx?$/,
@@ -27,7 +27,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /.(jpg|jpeg|png|svg)$/,
+          test: /.(jpg|jpeg|png|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -44,7 +44,7 @@ module.exports = {
     minimize: true,
   }, 
   devServer: {
-    publicPath: "/",
+      publicPath: "/",
     contentBase: `.${PUBLIC_PATH}`,
     watchContentBase: true,
     compress: true,
@@ -56,14 +56,15 @@ module.exports = {
     historyApiFallback: true,
     allowedHosts: ["127.0.0.0", "localhost"],
     stats: {
-      colors: true,
+        colors: true,
     },
-  },
-  resolve: {
+},
+resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json', '.svg'],
-  },
-  output: {
+},
+output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './static/frontend'),
-  },
+},
+cache: false, 
 };
